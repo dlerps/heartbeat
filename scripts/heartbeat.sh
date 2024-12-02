@@ -13,8 +13,13 @@ if [ -z $DELAY ]; then
     DELAY=1800
 fi
 
+## if $VERIFY_SSL is set to false, then disable SSL verification
+if [ $VERIFY_SSL == "false" ]; then
+    CURL_OPTS="-k"
+fi
+
 while :
 do
-    curl -X GET -I $URL
+    curl -X GET -I $URL $CURL_OPTS
     sleep $DELAY
 done

@@ -9,6 +9,7 @@ The host system which sends the heartbeats needs docker to be installed. The sup
 
  - `HEARTBEAT_URL` (required): URL of the Healthcheck Ping API
  - `TIMEOUT_IN_SECONDS` (default: 1800): Delay in between heartbeat requests
+ - `VERIFY_SSL` (default: true): Verify SSL certificates. Set to `false` to allow HTTPS with insecure certificates.
 
 Run via docker CLI:
 
